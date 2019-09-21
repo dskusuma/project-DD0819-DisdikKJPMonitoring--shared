@@ -1,105 +1,113 @@
-import { StyleSheet, Dimensions, Platform, StatusBar } from 'react-native'
+import { 
+  StyleSheet, 
+  Dimensions, 
+  Platform, 
+  StatusBar,
+  PixelRatio
+} from 'react-native'
 
 let {height, width} = Dimensions.get('window')
+let scaleFactor = PixelRatio.get();
+let scaleFactorFont = PixelRatio.getFontScale();
 
 let theme =  {
   FONT: {
     SIZE: {
-      SMALL: 12,
-      MEDIUM: 14,
-      LARGE: 16,
+      SMALL: 12 * scaleFactorFont,
+      MEDIUM: 14 * scaleFactorFont,
+      LARGE: 16 * scaleFactorFont,
 
-      H1: 96,
-      H2: 60,
-      H3: 48,
-      H4: 34,
-      H5: 24,
-      H6: 20,
-      SUBTITLE1: 16,
-      SUBTITLE2: 14,
-      BODY1: 16,
-      BODY2: 14,
-      BUTTON: 14,
-      CAPTION: 12,
-      OVERLINE: 10
+      H1: 96 * scaleFactorFont,
+      H2: 60 * scaleFactorFont,
+      H3: 48 * scaleFactorFont,
+      H4: 34 * scaleFactorFont,
+      H5: 24 * scaleFactorFont,
+      H6: 20 * scaleFactorFont,
+      SUBTITLE1: 16 * scaleFactorFont,
+      SUBTITLE2: 14 * scaleFactorFont,
+      BODY1: 16 * scaleFactorFont,
+      BODY2: 14 * scaleFactorFont,
+      BUTTON: 14 * scaleFactorFont,
+      CAPTION: 12 * scaleFactorFont,
+      OVERLINE: 10 * scaleFactorFont
     },
     CATEGORY: {
       H1: {
-        SIZE: 96,
+        SIZE: 96 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: -1.5,
+        LETTERSPACING: -1.5 * scaleFactorFont,
         WEIGHT: 'LIGHT'
       },
       H2: {
-        SIZE: 60,
+        SIZE: 60 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: -0.5,
+        LETTERSPACING: -0.5 * scaleFactorFont, 
         WEIGHT: 'LIGHT'
       },
       H3: {
-        SIZE: 48,
+        SIZE: 48 * scaleFactorFont,
         CASE: 'none' ,
         LETTERSPACING: 0,
         WEIGHT: 'REGULAR'
       },
       H4: {
-        SIZE: 34,
+        SIZE: 34 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: 0.25,
+        LETTERSPACING: 0.25 * scaleFactorFont,
         WEIGHT: 'REGULAR'
       },
       H5: {
-        SIZE: 24,
+        SIZE: 24 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: 0,
+        LETTERSPACING: 0 * scaleFactorFont,
         WEIGHT: 'REGULAR'
       },
       H6: {
-        SIZE: 20,
+        SIZE: 20 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: 0.15,
+        LETTERSPACING: 0.15 * scaleFactorFont,
         WEIGHT: 'SEMIBOLD'
       },
       SUBTITLE1: {
-        SIZE: 16,
+        SIZE: 16 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: 0.15,
+        LETTERSPACING: 0.15 * scaleFactorFont,
         WEIGHT: 'REGULAR'
       },
       SUBTITLE2: {
-        SIZE: 14,
+        SIZE: 14 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: 0.1,
+        LETTERSPACING: 0.1 * scaleFactorFont,
         WEIGHT: 'SEMIBOLD'
       },
       BODY1: {
-        SIZE: 16,
+        SIZE: 16 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: 0.5,
+        LETTERSPACING: 0.5 * scaleFactorFont,
         WEIGHT: 'REGULAR'
       },
       BODY2: {
-        SIZE: 12,
+        SIZE: 12 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: 0.25,
+        LETTERSPACING: 0.25 * scaleFactorFont,
         WEIGHT: 'REGULAR'
       },
       BUTTON: {
-        SIZE: 14,
+        SIZE: 14 * scaleFactorFont,
         CASE: 'uppercase' ,
-        LETTERSPACING: 1.25,
+        LETTERSPACING: 1.25 * scaleFactorFont,
         WEIGHT: 'SEMIBOLD'
       },
       CAPTION: {
-        SIZE: 12,
+        SIZE: 12 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: 0.4,
+        LETTERSPACING: 0.4 * scaleFactorFont,
         WEIGHT: 'REGULAR'
       },
       OVERLINE: {
-        SIZE: 10,
+        SIZE: 10 * scaleFactorFont,
         CASE: 'none' ,
-        LETTERSPACING: 1.5,
+        LETTERSPACING: 1.5 * scaleFactorFont,
         WEIGHT: 'REGULAR'
       },
     },
@@ -169,8 +177,18 @@ const globalStyles = StyleSheet.create({
   },
   textH4: {
     fontFamily: theme.FONT.FAMILY.NUNITO.BOLD,
+    fontSize: theme.FONT.CATEGORY.H4.SIZE,
+    letterSpacing: theme.FONT.CATEGORY.H4.LETTERSPACING
+  },
+  textH5: {
+    fontFamily: theme.FONT.FAMILY.NUNITO.BOLD,
     fontSize: theme.FONT.CATEGORY.H5.SIZE,
     letterSpacing: theme.FONT.CATEGORY.H5.LETTERSPACING
+  },
+  textH6: {
+    fontFamily: theme.FONT.FAMILY.NUNITO.BOLD,
+    fontSize: theme.FONT.CATEGORY.H6.SIZE,
+    letterSpacing: theme.FONT.CATEGORY.H6.LETTERSPACING
   },
   textHSub: {
     fontFamily: theme.FONT.FAMILY.NUNITO.REGULAR,
@@ -184,4 +202,4 @@ const globalStyles = StyleSheet.create({
 })
 
 export default globalStyles;
-export { theme };
+export { theme, scaleFactor, scaleFactorFont };
