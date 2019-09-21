@@ -196,6 +196,11 @@ const globalStyles = StyleSheet.create({
     letterSpacing: theme.FONT.CATEGORY.BODY1.LETTERSPACING,
     color: theme.COLOR.BLACK50
   },
+  textCaption: {
+    fontSize: theme.FONT.CATEGORY.CAPTION.SIZE,
+    letterSpacing: theme.FONT.CATEGORY.CAPTION.LETTERSPACING,
+    color: theme.COLOR.BLACK50
+  },
   container: {
     backgroundColor: theme.COLOR.COMPONENT.BACKGROUND
   }
