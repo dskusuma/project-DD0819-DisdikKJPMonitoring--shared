@@ -149,6 +149,7 @@ let theme =  {
     RED: '#E74C3C',
     GRAYCHARTDARK: '#9C9C9C',
     GRAYCHARTLIGHT: '#C4C4C4',
+    GRAY_LIGHT: '#E9E9E9',
     COMPONENT: {
       BACKGROUND: '#EDF0F5'
     }
