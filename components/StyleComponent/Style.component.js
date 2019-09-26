@@ -9,10 +9,15 @@ import globalStyles from '../../styles/theme.styles';
 const TextStyle = () => {
   return (
     <View>
-      <Text>Heading 1</Text>
-      <Text>Heading 2</Text>
+      <Text style={ globalStyles.textH4 }>Heading 4</Text>
+      <Text style={ globalStyles.textH5 }>Heading 5</Text>
+      <Text style={ globalStyles.textH6 }>Heading 6</Text>
+      <Text style={ globalStyles.textHSub }>Sub Heading</Text>
       <Text style={ globalStyles.textSectionTitle }>Section Title</Text>
       <Text style={ globalStyles.textBody }>Body</Text>
+      <Text style={ globalStyles.textBody2 }>Body2</Text>
+      <Text style={ globalStyles.textUsername }>Username</Text>
+      <Text style={ globalStyles.textCaption }>Caption</Text>
     </View>
   )
 }

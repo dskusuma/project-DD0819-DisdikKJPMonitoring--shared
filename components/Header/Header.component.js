@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Header,
+  Avatar
 } from 'react-native-elements';
 import PropTypes from 'prop-types';
 import {
@@ -8,9 +9,9 @@ import {
   View,
   TouchableOpacity,
   Text,
-  StyleSheet
+  StyleSheet,
+  ScrollView
 } from 'react-native';
-import { Avatar } from 'react-native-elements';
 import globalStyles, { theme } from '../../styles/theme.styles'
 import Icon from '../Icon/Icon.component';
 import NavigationUtils from '../../utils/navigation.utils';
